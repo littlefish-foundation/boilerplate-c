@@ -1,7 +1,9 @@
 import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { LoginButton } from "@/components/auth/login-button";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -20,8 +22,16 @@ export default function Home() {
         >
           littlefish
         </h1>
-        Welcome to <span className="text-blue-400">Next.js</span>
-        <Button>Get started</Button>
+        <p className="text-white text-lg">
+          Cardano boilerplate from littlefish
+        </p>
+        <div>
+          <LoginButton mode="">
+            <Button variant="secondary" size="lg">
+              Sign in
+            </Button>
+          </LoginButton>
+        </div>
       </div>
     </main>
   );
